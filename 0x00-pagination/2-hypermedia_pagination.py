@@ -42,10 +42,9 @@ class Server:
 
         return self.__dataset
 
-
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """
-        Returns a list of rows from the dataset for the given page and page size.
+        Returns list of rows from dataset for the given page & page size.
 
         Arguments:
         page -- the current page number (default is 1)
@@ -54,8 +53,8 @@ class Server:
         Returns:
         A list of rows from the dataset for the given page.
         """
-        assert isinstance(page, int) and page > 0, "Page must be a positive integer"
-        assert isinstance(page_size, int) and page_size > 0, "Page size must be a positive integer"
+        assert isinstance(page, int) and page > 0, "must be a positive integer"
+        assert isinstance(page_size, int) and page_size > 0, "positive integer"
 
         start_index, end_index = index_range(page, page_size)
         dataset = self.dataset()
@@ -64,7 +63,6 @@ class Server:
             return []
 
         return dataset[start_index:end_index]
-
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
         """
