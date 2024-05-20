@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
- Module for simple pagnation.
+ Module for simple pagnationk.
 """
 
 import csv
