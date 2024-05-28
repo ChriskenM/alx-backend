@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ g.get('babel_locale', 'en') }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ _('home_title') }}</title>
+</head>
+<body>
+    <p>
+        {% if g.user %}
+            {{ _('You are logged in as %(username)s.', username=g.user['name']) }}
+        {% else %}
+            {{ _('You are not logged in.') }}
+        {% endif %}
+    </p>
+</body>
+</html>
